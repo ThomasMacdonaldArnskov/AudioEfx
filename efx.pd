@@ -1,0 +1,399 @@
+#N canvas 0 0 1914 976 10;
+#X obj 651 19 bng 70 250 50 0 empty empty PRESET_1 11 34 0 10 -86277
+-162280 -262144;
+#X obj 651 89 s pre1;
+#X obj 784 89 s pre2;
+#X obj 40 829 s flangevalue2;
+#X obj 40 851 s flangevalue1;
+#X obj 390 19 bng 70 250 50 0 empty empty EFFECTS_OFF 9 36 0 9 -232576
+-162280 -1;
+#X obj 94 766 r off;
+#X obj 350 89 s off;
+#X msg 40 765 0;
+#X obj 1728 833 dac~;
+#X obj 1729 767 catch~ left;
+#X obj 1750 799 catch~ right;
+#X text 31 741 ------------------------------------------------------------
+;
+#X text 392 741 ------------------------------------------------------------
+;
+#X text 751 741 ------------------------------------------------------------
+;
+#X text 1111 741 ------------------------------------------------------------
+;
+#X text 1613 728 AUDIO OUT;
+#X obj 784 19 bng 70 250 50 0 empty empty PRESET_2 11 34 0 10 -86277
+-162280 -262144;
+#X text 31 -92 ------------------------------------------------------------
+;
+#X text 392 -92 ------------------------------------------------------------
+;
+#X text 751 -92 ------------------------------------------------------------
+;
+#X text 1111 -92 ------------------------------------------------------------
+;
+#X obj 39 310 hsl 500 20 0 1 0 0 empty empty FLANGER_DEPTH 10 10 0
+10 -13330 -262144 -262144 20958 1;
+#X obj 39 249 hsl 500 20 0 30 0 0 empty empty FLANGER_FREQUENCY 10
+10 0 10 -13330 -262144 -262144 632 1;
+#X floatatom 514 269 5 0 0 0 - - -;
+#X obj 453 232 r flangevalue1;
+#X floatatom 515 330 5 0 0 0 - - -;
+#X obj 39 508 hsl 500 20 0 1000 0 0 empty empty DELAY_TIME 10 10 0
+10 -13330 -262144 -262144 31397 1;
+#X floatatom 514 528 5 0 0 0 - - -;
+#X obj 459 491 r delayvalue1;
+#X text 31 145 ------------------------------------------------------------
+;
+#X text 392 145 ------------------------------------------------------------
+;
+#X text 32 195 FLANGER CONTROL;
+#X text 31 466 ------------------------------------------------------------
+;
+#X text 812 466 ------------------------------------------------------------
+;
+#X text 32 453 FEEDBACK DELAY;
+#X obj 36 269 s fval1;
+#X obj 36 528 s dval1;
+#X obj 116 25 bng 70 250 50 0 empty empty STOP 24 34 0 10 -258113 -162280
+-262144;
+#X obj 36 24 bng 70 250 50 0 empty empty PLAY 25 34 0 10 -83269 -162280
+-262144;
+#X obj 35 95 s start1;
+#X obj 115 95 s stop1;
+#X obj 652 765 loadbang;
+#X msg 652 783 0.5;
+#X obj 1309 92 s volume1;
+#X obj 1235 19 knob 70 70 0 1 0 0 empty empty MASTER_VOLUME 0 -8 0
+8 -1 -260097 -1 3450 1;
+#X text 751 145 ------------------------------------------------------------
+;
+#X text 1112 145 ------------------------------------------------------------
+;
+#X text 811 195 CHORUS CONTROL;
+#X obj 922 19 bng 70 250 50 0 empty empty PRESET_3 11 34 0 10 -86277
+-162280 -262144;
+#X obj 1055 19 bng 70 250 50 0 empty empty PRESET_4 11 34 0 10 -86277
+-162280 -262144;
+#X text 1471 -92 ------------------------------------------------------------
+;
+#X text 1472 741 ------------------------------------------------------------
+;
+#X obj 922 90 s pre3;
+#X obj 1055 90 s pre4;
+#X obj 72 767 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 174 768 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 144 850 s trem1;
+#X obj 144 829 s trem2;
+#X obj 144 808 s trem3;
+#X obj 195 768 r off1;
+#X msg 144 767 0;
+#X text 814 452 TREMOLO CONTROL;
+#X obj 1620 800 s finvol;
+#X obj 1679 -23 r finvol;
+#X obj 1680 6 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X text 1472 145 ------------------------------------------------------------
+;
+#X obj 821 570 hsl 500 20 0 1 0 0 empty empty TREMOLO_OFFSET 10 10
+0 10 -13330 -262144 -262144 27495 1;
+#X obj 1277 492 r trem1;
+#X obj 821 508 hsl 500 20 0 100 0 0 empty empty TREMOLO_FREQUENCY 10
+10 0 10 -13330 -262144 -262144 190 1;
+#X obj 1277 613 r trem2;
+#X obj 1277 553 r trem3;
+#X obj 818 528 s tremololo1;
+#X obj 818 650 s tremololo2;
+#X obj 818 590 s tremololo3;
+#X floatatom 1296 528 5 0 0 0 - - -;
+#X floatatom 1297 590 5 0 0 0 - - -;
+#X floatatom 1295 650 5 0 0 0 - - -;
+#X obj 821 630 hsl 500 20 0 1 0 0 empty empty TREMOLO_DEPTH 10 10 0
+10 -13330 -262144 -262144 2495 1;
+#X floatatom 1295 390 5 0 0 0 - - -;
+#X obj 819 249 hsl 500 20 0 30 0 0 empty empty CHORUS_FREQUENCY 10
+10 0 10 -13330 -262144 -262144 16633 1;
+#X obj 820 310 hsl 500 20 0 1 0 0 empty empty CHORUS_DEPTH 10 10 0
+10 -13330 -262144 -262144 44161 1;
+#X obj 820 370 hsl 500 20 0 10 0 0 empty empty CHORUS_DELAY 10 10 0
+10 -13330 -262144 -262144 17999 1;
+#X floatatom 1294 269 5 0 0 0 - - -;
+#X floatatom 1295 330 5 0 0 0 - - -;
+#X floatatom 1418 304 5 0 0 0 - - -;
+#X obj 1263 232 r chorus1;
+#X obj 816 269 s chor1;
+#X obj 817 330 s chor2;
+#X obj 1264 293 r chorus2;
+#X obj 1264 353 r chorus3;
+#X obj 1363 251 knob 50 50 0 1 0 0 empty empty CHORUS_VOLUME 2 -8 0
+8 -262144 -258113 -1 2396 1;
+#X obj 817 390 s chor3;
+#X obj 1363 304 s chor4;
+#X floatatom 634 304 5 0 0 0 - - -;
+#X obj 578 251 knob 50 50 0 1 0 0 empty empty FLANGER_VOLUME 2 -8 0
+8 -262144 -258113 -1 397 1;
+#X obj 578 304 s fval2;
+#X obj 660 232 r flangevalue2;
+#X obj 453 293 r flangevalue3;
+#X obj 36 330 s fval3;
+#X floatatom 514 390 5 0 0 0 - - -;
+#X obj 39 370 hsl 500 20 0 10 0 0 empty empty FLANGER_DELAY 10 10 0
+10 -13330 -262144 -262144 7196 1;
+#X obj 36 390 s fval4;
+#X obj 453 353 r flangevalue4;
+#X obj 577 340 bng 50 250 50 0 empty empty EFX_OFF 10 25 0 9 -4160
+-128992 -262144;
+#X obj 577 390 s off;
+#X obj 1363 599 bng 50 250 50 0 empty empty EFX_OFF 10 25 0 9 -4160
+-128992 -262144;
+#X obj 1363 649 s off1;
+#X obj 40 808 s flangevalue3;
+#X obj 40 787 s flangevalue4;
+#X obj 1439 232 r chorus4;
+#X floatatom 1448 564 5 0 0 0 - - -;
+#X obj 1363 511 knob 50 50 0 1 0 0 empty empty TREMOLOLO_VOLUME 2 -8
+0 8 -262144 -258113 -1 897 1;
+#X obj 286 766 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 254 766 0;
+#X obj 254 787 s chorus1;
+#X obj 254 808 s chorus2;
+#X obj 254 829 s chorus3;
+#X obj 254 849 s chorus4;
+#X obj 1459 492 r trem4;
+#X obj 1363 564 s tremololo4;
+#X obj 306 766 r off2;
+#X obj 1363 339 bng 50 250 50 0 empty empty EFX_OFF 10 25 0 9 -4160
+-128992 -262144;
+#X obj 1363 389 s off2;
+#X msg 364 767 0;
+#X obj 395 767 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 365 787 s delayvalue1;
+#X obj 364 808 s delayvalue2;
+#X obj 420 766 r off3;
+#X obj 577 509 bng 50 250 50 0 empty empty EFX_OFF 10 25 0 9 -4160
+-128992 -262144;
+#X obj 577 559 s off3;
+#X obj 388 89 s off1;
+#X obj 430 89 s off2;
+#X obj 475 89 s off3;
+#X floatatom 633 653 5 0 0 0 - - -;
+#X obj 577 600 knob 50 50 0 1 0 0 empty empty DELAY_VOLUME 2 -8 0 8
+-262144 -258113 -1 1396 1;
+#X obj 144 787 s trem4;
+#X obj 659 581 r delayvalue2;
+#X obj 577 653 s dval2;
+#X text 840 -75 AUDIO EFFECTS MIXER;
+#X text 32 728 EFFECTS OFF CONTROL;
+#X obj 1557 631 s track;
+#X obj 1557 271 vradio 45 1 0 8 empty empty empty -20 -8 0 10 -260097
+-33289 -1 6;
+#X obj 827 762 whathappenedtosoybomb;
+#X text 392 710 ------------------------------------------------------------
+;
+#X text 751 710 ------------------------------------------------------------
+;
+#X text 1111 710 ------------------------------------------------------------
+;
+#X text 1472 710 ------------------------------------------------------------
+;
+#X text 32 710 ------------------------------------------------------------
+;
+#X text 79 -52 PLAY CONTROLS;
+#X text 1253 -52 MAIN VOLUME CONTROL;
+#X text 860 -52 EFFECT PRESETS;
+#X text 379 -52 ALL EFFECTS OFF;
+#X text 1607 314 TRACK 2;
+#X text 1606 269 TRACK 1;
+#X text 1607 361 TRACK 3;
+#X text 1607 408 TRACK 4;
+#X text 1607 453 TRACK 5;
+#X text 1607 498 TRACK 6;
+#X text 1607 545 TRACK 7;
+#X text 1607 589 TRACK 8;
+#X obj 37 -12 pddp/dsp;
+#X text 31 210 ------------------------------------------------------------
+;
+#X text 808 210 ------------------------------------------------------------
+;
+#X text 1617 285 DR. DRE - STILL DRE;
+#X text 1618 330 EELS - WHATEVER HAPPENED TO SOY BOMB?;
+#X text 1618 377 PHAROAHE MONCH - AGENT ORANGE;
+#X text 1618 424 ENNIO MORRICONE - THE ECSTACY OF GOLD;
+#X text 1618 469 U2 - IN A LITTLE WHILE;
+#X text 1618 561 HANS ZIMMER - YOUR'E SO COOL;
+#X text 1618 605 JETHRO TULL - MY GOD;
+#X text 646 2 HEAVY FLANGER;
+#X text 1045 2 TREMOLO + CHORUS;
+#X text 31 -44 ------------------------------------------------------------
+;
+#X text 392 -44 ------------------------------------------------------------
+;
+#X text 751 -44 ------------------------------------------------------------
+;
+#X text 1112 -44 --------------------------------------------;
+#X text 763 -67 --------------------------------------------;
+#X text 31 863 ------------------------------------------------------------
+;
+#X text 392 863 ------------------------------------------------------------
+;
+#X text 751 863 ------------------------------------------------------------
+;
+#X text 1111 863 ------------------------------------------------------------
+;
+#X text 1471 863 ------------------------------------------------------------
+;
+#X text 824 789 CONTAINS:;
+#X text 824 807 AUDIO PIPELINE;
+#X text 824 820 AUDIO EFX SUBPATCHES;
+#X text 824 833 TRACK SELECT SUBPATCH;
+#X text 824 846 PRESET SUBPATCH;
+#X text 914 2 COMPLETE CHAOS;
+#X text 1618 514 MICHAEL LAND - THE CURSE OF MONKEY ISLAND;
+#X text 777 2 CHORUS + DELAY;
+#X obj 1678 783 pvu~;
+#X obj 1679 815 pvu~;
+#X obj 1621 832 s finvolR;
+#X obj 1740 5 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 1739 -23 r finvolR;
+#X floatatom 1267 92 5 0 0 0 - - -;
+#X obj 1432 -5 knob 40 40 0 1 0 0 empty empty RIGHT_CHANNEL_VOL -20
+-8 0 8 -262144 -260097 -1 3900 1;
+#X obj 652 801 s startVol;
+#X obj 1432 38 s RChanVol;
+#X obj 1432 77 knob 40 40 0 1 0 0 empty empty LEFT_CHANNEL_VOL -20
+-8 0 8 -262144 -260097 -1 3900 1;
+#X obj 1432 123 s LChanVol;
+#X obj 1307 0 r startVol;
+#X obj 1520 -24 r startVolC;
+#X obj 1520 58 r startVolC;
+#X obj 572 765 loadbang;
+#X msg 572 783 1;
+#X text 824 728 SUBPATCHES;
+#X text 570 728 LOADBANGS AHOY!;
+#X obj 572 801 s startVolC;
+#X obj 1557 665 s start1;
+#X obj 1557 648 delay 1000;
+#X text 1376 -44 --------------------------------------------;
+#X text 1640 -44 --------------------------------;
+#X text 1531 210 --------------------------------------------------
+;
+#X text 1532 196 TRACK MANAGER;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array soundshape 100 float 2;
+#X coords 0 1 100 -1 400 83 1 0 0;
+#X restore 1063 774 graph;
+#X obj 1475 790 tgl 50 0 empty empty empty -10 -8 0 10 -4034 -258113
+-1 1 1;
+#X obj 1475 840 s wavshape;
+#X obj 572 830 loadbang;
+#X obj 572 847 s turnon;
+#X obj 1475 773 r turnon;
+#X obj 390 2 r turnon;
+#X text 1061 728 GRAPH OUTPUT - AUDIO;
+#X connect 0 0 1 0;
+#X connect 5 0 7 0;
+#X connect 5 0 131 0;
+#X connect 5 0 132 0;
+#X connect 5 0 133 0;
+#X connect 6 0 55 0;
+#X connect 8 0 3 0;
+#X connect 8 0 4 0;
+#X connect 8 0 108 0;
+#X connect 8 0 109 0;
+#X connect 10 0 9 0;
+#X connect 10 0 191 0;
+#X connect 11 0 9 1;
+#X connect 11 0 192 0;
+#X connect 17 0 2 0;
+#X connect 22 0 26 0;
+#X connect 22 0 99 0;
+#X connect 23 0 36 0;
+#X connect 23 0 24 0;
+#X connect 25 0 23 0;
+#X connect 27 0 28 0;
+#X connect 27 0 37 0;
+#X connect 29 0 27 0;
+#X connect 38 0 41 0;
+#X connect 39 0 40 0;
+#X connect 42 0 43 0;
+#X connect 43 0 198 0;
+#X connect 45 0 44 0;
+#X connect 45 0 196 0;
+#X connect 49 0 53 0;
+#X connect 50 0 54 0;
+#X connect 55 0 8 0;
+#X connect 56 0 61 0;
+#X connect 60 0 56 0;
+#X connect 61 0 57 0;
+#X connect 61 0 58 0;
+#X connect 61 0 59 0;
+#X connect 61 0 136 0;
+#X connect 64 0 65 0;
+#X connect 67 0 74 0;
+#X connect 67 0 76 0;
+#X connect 68 0 69 0;
+#X connect 69 0 72 0;
+#X connect 69 0 75 0;
+#X connect 70 0 78 0;
+#X connect 71 0 67 0;
+#X connect 78 0 73 0;
+#X connect 78 0 77 0;
+#X connect 80 0 83 0;
+#X connect 80 0 87 0;
+#X connect 81 0 84 0;
+#X connect 81 0 88 0;
+#X connect 82 0 79 0;
+#X connect 82 0 92 0;
+#X connect 86 0 80 0;
+#X connect 89 0 81 0;
+#X connect 90 0 82 0;
+#X connect 91 0 93 0;
+#X connect 91 0 85 0;
+#X connect 95 0 94 0;
+#X connect 95 0 96 0;
+#X connect 97 0 95 0;
+#X connect 98 0 22 0;
+#X connect 101 0 100 0;
+#X connect 101 0 102 0;
+#X connect 103 0 101 0;
+#X connect 104 0 105 0;
+#X connect 106 0 107 0;
+#X connect 110 0 91 0;
+#X connect 112 0 111 0;
+#X connect 112 0 120 0;
+#X connect 113 0 114 0;
+#X connect 114 0 115 0;
+#X connect 114 0 116 0;
+#X connect 114 0 117 0;
+#X connect 114 0 118 0;
+#X connect 119 0 112 0;
+#X connect 121 0 113 0;
+#X connect 122 0 123 0;
+#X connect 124 0 126 0;
+#X connect 124 0 127 0;
+#X connect 125 0 124 0;
+#X connect 128 0 125 0;
+#X connect 129 0 130 0;
+#X connect 135 0 134 0;
+#X connect 135 0 138 0;
+#X connect 137 0 135 0;
+#X connect 142 0 141 0;
+#X connect 142 0 211 0;
+#X connect 191 0 63 0;
+#X connect 192 0 193 0;
+#X connect 195 0 194 0;
+#X connect 197 0 199 0;
+#X connect 200 0 201 0;
+#X connect 202 0 45 0;
+#X connect 203 0 197 0;
+#X connect 204 0 200 0;
+#X connect 205 0 206 0;
+#X connect 206 0 209 0;
+#X connect 211 0 210 0;
+#X connect 217 0 218 0;
+#X connect 219 0 220 0;
+#X connect 221 0 217 0;
+#X connect 222 0 5 0;
